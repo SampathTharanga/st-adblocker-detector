@@ -1,0 +1,252 @@
+/* ST AdBlocker Detector - Admin Styles
+   Developer: Sampath Tharanga
+*/
+
+/* ===== Layout ===== */
+.st-adb-wrap {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    max-width: 1100px;
+}
+
+.st-adb-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    padding: 22px 28px;
+    border-radius: 10px;
+    margin: 20px 0 24px;
+    box-shadow: 0 4px 20px rgba(0,0,0,.25);
+}
+
+.st-adb-header img {
+    width: 56px;
+    height: 56px;
+    border-radius: 8px;
+}
+
+.st-adb-header h1 {
+    margin: 0;
+    font-size: 22px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.st-adb-header span {
+    color: rgba(255,255,255,.65);
+    font-size: 13px;
+}
+
+/* ===== Body layout ===== */
+.st-adb-body {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.st-adb-main { flex: 1; min-width: 0; }
+
+.st-adb-sidebar { width: 260px; flex-shrink: 0; }
+
+/* ===== Tables ===== */
+.st-adb-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+.st-adb-table thead th {
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    color: #fff;
+    padding: 14px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .3px;
+}
+
+.st-adb-table tbody tr:nth-child(even) { background: #fafbff; }
+.st-adb-table tbody tr:hover { background: #f0f4ff; }
+
+.st-adb-table td {
+    padding: 12px 18px;
+    font-size: 13.5px;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+}
+
+.st-adb-table td:first-child {
+    font-weight: 600;
+    width: 38%;
+    color: #444;
+}
+
+.st-adb-table input[type="text"],
+.st-adb-table input[type="number"] {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 7px 10px;
+    font-size: 13px;
+    width: 100%;
+    max-width: 360px;
+    transition: border .2s;
+    box-sizing: border-box;
+}
+
+.st-adb-table input[type="text"]:focus,
+.st-adb-table input[type="number"]:focus {
+    border-color: #667eea;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(102,126,234,.2);
+}
+
+.st-adb-table input[type="range"] {
+    width: 200px;
+    accent-color: #667eea;
+    vertical-align: middle;
+}
+
+.st-adb-table o {
+    display: inline-block;
+    margin-left: 8px;
+    font-weight: 700;
+    color: #667eea;
+    min-width: 28px;
+}
+
+/* ===== Toggle Switch ===== */
+.st-toggle {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 25px;
+}
+
+.st-toggle input { opacity: 0; width: 0; height: 0; }
+
+.st-slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: #ccc;
+    border-radius: 25px;
+    transition: .3s;
+}
+
+.st-slider:before {
+    content: "";
+    position: absolute;
+    height: 19px;
+    width: 19px;
+    left: 3px;
+    bottom: 3px;
+    background: #fff;
+    border-radius: 50%;
+    transition: .3s;
+    box-shadow: 0 1px 4px rgba(0,0,0,.2);
+}
+
+.st-toggle input:checked + .st-slider { background: linear-gradient(135deg,#667eea,#764ba2); }
+.st-toggle input:checked + .st-slider:before { transform: translateX(21px); }
+
+/* ===== Hint text ===== */
+.st-hint {
+    margin: 5px 0 0;
+    font-size: 12px;
+    color: #888;
+    font-style: italic;
+}
+
+.st-hint code {
+    background: #f0f0f0;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 11px;
+}
+
+/* ===== Action buttons ===== */
+.st-adb-actions {
+    margin-top: 20px;
+    padding: 18px 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.st-adb-actions .button-primary {
+    background: linear-gradient(135deg,#667eea,#764ba2) !important;
+    border-color: transparent !important;
+    color: #fff !important;
+    padding: 8px 22px !important;
+    height: auto !important;
+    font-weight: 600 !important;
+    border-radius: 5px !important;
+    box-shadow: 0 3px 10px rgba(102,126,234,.4) !important;
+}
+
+.st-msg {
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 5px;
+    display: none;
+}
+
+.st-msg-success { background: #e8f5e9; color: #2e7d32; }
+.st-msg-error   { background: #fdecea; color: #c62828; }
+
+/* ===== Sidebar ===== */
+.st-adb-sidebar-box {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+.st-adb-sidebar-box h3 {
+    margin: 0 0 12px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1a1a2e;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 8px;
+}
+
+.st-adb-sidebar-box p {
+    font-size: 13px;
+    color: #555;
+    margin: 6px 0;
+    line-height: 1.6;
+}
+
+.st-adb-sidebar-box hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 12px 0;
+}
+
+.st-how ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.st-how ul li {
+    padding: 6px 0;
+    font-size: 13px;
+    color: #444;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.st-how ul li:last-child { border-bottom: none; }
+
+/* ===== WP editor fix ===== */
+.wp-editor-wrap { border-radius: 5px !important; overflow: hidden; }
