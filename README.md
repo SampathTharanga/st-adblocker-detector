@@ -60,8 +60,8 @@ until the visitor disables their ad blocker.
 
 ## Screenshots
 
-![Frontend Overlay]([screenshots/screenshot-1.png](https://github.com/user-attachments/assets/f49aafb5-a6bc-4d33-a9ab-a17d421489cc))
-
+### Frontend — Ad Blocker Detected Overlay
+![Ad Blocker Detected](https://github.com/user-attachments/assets/af071a60-d35a-4280-9839-618026fb2434)
 
 ## License
 
