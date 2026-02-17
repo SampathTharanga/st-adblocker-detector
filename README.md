@@ -57,6 +57,12 @@ until the visitor disables their ad blocker.
 
 ---
 
+
+## Screenshots
+
+![Frontend Overlay]([screenshots/screenshot-1.png](https://github.com/user-attachments/assets/f49aafb5-a6bc-4d33-a9ab-a17d421489cc))
+
+
 ## License
 
 GPL v2 or later — see [LICENSE](LICENSE)
